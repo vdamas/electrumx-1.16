@@ -4074,3 +4074,21 @@ class Lbry(Coin):
     TX_PER_BLOCK = 43
     RPC_PORT = 9245
     REORG_LIMIT = 5000
+    
+class Cryptoescudo(Coin):
+    NAME = "Cryptoescudo"
+    SHORTNAME = "CESC"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("0488b21e")
+    XPRV_VERBYTES = bytes.fromhex("0488ade4")
+    P2PKH_VERBYTE = bytes.fromhex("28")
+    P2SH_VERBYTES = [bytes.fromhex("05")]
+    WIF_BYTE = bytes.fromhex("1c")
+    GENESIS_HASH = ('070390081e6d136d5714b9395d83807d'
+                    '0b2859f98e49bb2fcd995467b6b65016')
+    DESERIALIZER = lib_tx.DeserializerSegWit
+    TX_COUNT = 1687784
+    TX_COUNT_HEIGHT = 1308573
+    TX_PER_BLOCK = 1
+    RPC_PORT = 61142
+    REORG_LIMIT = 1000
